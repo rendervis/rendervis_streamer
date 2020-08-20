@@ -6,11 +6,13 @@ import StreamDelete from "./components/streams/stream_delete";
 import StreamEdit from "./components/streams/stream_edit";
 import StreamList from "./components/streams/stream_list";
 import StreamShow from "./components/streams/stream_show";
+import Header from "./components/Header";
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="ui container">
       <BrowserRouter>
+        <Header />
         <div>
           <Route exact path="/" component={StreamList} />
           <Route exact path="/streams/new" component={StreamCreate} />
@@ -24,5 +26,3 @@ const App = () => {
 };
 
 export default App;
-
-// git commit -m "video streamer app. base react project with npx create"
